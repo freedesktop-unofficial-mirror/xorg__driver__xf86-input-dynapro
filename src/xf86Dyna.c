@@ -27,7 +27,7 @@
  * in this Software without prior written authorization from Metro Link.
  *
  */
-/* $XFree86: xc/programs/Xserver/hw/xfree86/input/dynapro/xf86Dyna.c,v 1.4 2001/11/26 16:25:53 dawes Exp $ */
+/* $XFree86$ */
 
 #define _DYNAPRO_C_
 
