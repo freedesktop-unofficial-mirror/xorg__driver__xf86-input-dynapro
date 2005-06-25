@@ -42,7 +42,7 @@
 
 #include "xf86Dyna.h"
 
-InputDriverRec DYNAPRO = {
+_X_EXPORT InputDriverRec DYNAPRO = {
         1,
         "dynapro",
         NULL,
@@ -127,8 +127,11 @@ DynaproSetupProc(	pointer module,
 	return (pointer) 1;
 }
 
-XF86ModuleData dynaproModuleData = { &VersionRec, DynaproSetupProc, NULL };
-
+_X_EXPORT XF86ModuleData dynaproModuleData = {
+    &VersionRec,
+    DynaproSetupProc,
+    NULL
+};
 
 #endif /* XFree86LOADER */
 
