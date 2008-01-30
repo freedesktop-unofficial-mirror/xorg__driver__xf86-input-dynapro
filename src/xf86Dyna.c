@@ -114,7 +114,9 @@ static const char *reqSymbols[] = {
 	"xf86SetIntOption",
 	"xf86SetStrOption",
 	"xf86XInputSetScreen",
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) == 0
 	"xf86XInputSetSendCoreEvents",
+#endif
 	NULL
 };
 
@@ -494,11 +496,13 @@ SwitchMode (ClientPtr client, DeviceIntPtr dev, int mode)
                 priv->reporting_mode = mode;
                 return (Success);
         }
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) == 0
         else if ((mode == SendCoreEvents) || (mode == DontSendCoreEvents))
         {
                 xf86XInputSetSendCoreEvents (pInfo, (mode == SendCoreEvents));
                 return (Success);
         }
+#endif
         else
                 return (!Success);   
 }
