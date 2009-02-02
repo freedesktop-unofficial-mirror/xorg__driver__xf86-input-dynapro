@@ -1,3 +1,5 @@
+.deps
+.libs
 ChangeLog
 Makefile
 Makefile.in
@@ -20,3 +22,5 @@ missing
 stamp-h1
 *~
 man/dynapro.?
+xf86-input-dynapro-*.tar.*
+tags
